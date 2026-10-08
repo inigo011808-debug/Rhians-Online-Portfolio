@@ -24,7 +24,6 @@ export function SocialLinks({ className, variant = "plain" }: SocialLinksProps) 
     <ul className={cn("flex flex-wrap items-center gap-2", className)}>
       {SOCIALS.map((social) => {
         const Icon = SOCIAL_ICONS[social.icon];
-        const iconSize = social.icon === "discord" ? "size-[22px]" : "size-[18px]";
         return (
           <li key={social.label}>
             <SmartLink
@@ -37,7 +36,7 @@ export function SocialLinks({ className, variant = "plain" }: SocialLinksProps) 
                   : "size-9",
               )}
             >
-              <Icon className={iconSize} />
+              <Icon className="size-[18px]" />
             </SmartLink>
           </li>
         );
