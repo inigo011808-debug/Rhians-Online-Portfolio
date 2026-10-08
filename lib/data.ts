@@ -135,8 +135,8 @@ export const ABOUT: AboutCopy = {
   kicker: "about",
   title: "About",
   paragraphs: [
-    "Nice to meet you. I'm coderedexter. I like building useful things: web apps, small tools, and automations that save time.",
-    "Replace this with your own story: what you're learning, what you've shipped, and where you're headed.",
+    "I'm a self-taught developer doing this for fun — I've always liked learning and using software and hardware, and decided I could actually use those skills for something useful.",
+    "I plan to go deeper into economics and finance, but I also have a wide range of skills in this area, and I'm willing to work together with anyone who has a plan and a vision.",
   ],
 };
 
