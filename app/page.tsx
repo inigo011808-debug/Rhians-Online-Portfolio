@@ -97,7 +97,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
-              <ContactButton href="#contact">{CONTACT.cta}</ContactButton>
+              <ContactButton email={SITE.email}>{CONTACT.cta}</ContactButton>
               <SmartLink
                 href="#projects"
                 className={cn(
@@ -252,7 +252,7 @@ export default function Home() {
                   </SmartLink>
                 </p>
                 <div className="flex flex-wrap items-center justify-center gap-3">
-                  <ContactButton href={`mailto:${SITE.email}`}>
+                  <ContactButton email={SITE.email}>
                     {CONTACT.cta}
                   </ContactButton>
                   <CopyEmailButton email={SITE.email} />
