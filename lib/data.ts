@@ -13,7 +13,7 @@
  */
 
 export type NavIconKey = "home" | "about" | "projects" | "skills" | "contact";
-export type SocialIconKey = "github" | "linkedin" | "x" | "email";
+export type SocialIconKey = "github" | "linkedin" | "discord" | "email";
 
 export interface NavItem {
   /** In-page anchor, e.g. "#about". Must match the section id in app/page.tsx */
@@ -97,7 +97,7 @@ export const SITE = {
   /** Used for metadata/OG when NEXT_PUBLIC_SITE_URL is not set */
   url: "https://coderedexter.vercel.app",
   /** ↓↓↓ CHANGE THIS to your real email. It powers every mailto: link ↓↓↓ */
-  email: "you@example.com",
+  email: "theregisway@gmail.com",
   /**
    * Your photo in the About section. Save a picture in /public/images/ then
    * write e.g. avatar: "/images/me.jpg". Leave "" to show no photo.
@@ -123,9 +123,9 @@ export const NAV_ITEMS: NavItem[] = [
 /* ─────────────────── Social / contact links (you edit these) ─────────────────── */
 
 export const SOCIALS: SocialLink[] = [
-  { label: "GitHub", icon: "github", url: "#" }, // TODO: https://github.com/<you>
-  { label: "LinkedIn", icon: "linkedin", url: "#" }, // TODO: https://www.linkedin.com/in/<you>
-  { label: "X", icon: "x", url: "#" }, // TODO: https://x.com/<you>
+  { label: "GitHub", icon: "github", url: "https://github.com/inigo011808-debug" },
+  { label: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/rhian-inigo-r-regis-bb1b71310" },
+  { label: "Discord", icon: "discord", url: "https://discord.com/users/446605345305919488" },
   { label: "Email", icon: "email", url: `mailto:${SITE.email}` }, // auto-uses SITE.email
 ];
 

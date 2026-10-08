@@ -1,6 +1,6 @@
 import { MailIcon } from "lucide-react";
 
-import { GithubIcon, LinkedinIcon, XIcon } from "@/components/icons";
+import { GithubIcon, LinkedinIcon, DiscordIcon } from "@/components/icons";
 import { SmartLink } from "@/components/smart-link";
 import { SOCIALS } from "@/lib/data";
 import { cn } from "@/lib/utils";
@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const SOCIAL_ICONS = {
   github: GithubIcon,
   linkedin: LinkedinIcon,
-  x: XIcon,
+  discord: DiscordIcon,
   email: MailIcon,
 } as const;
 
