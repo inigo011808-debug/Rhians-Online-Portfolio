@@ -6,8 +6,8 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { cn } from "@/lib/utils";
 
 /**
- * Copies the given email to the clipboard, then falls back to opening a
- * mailto: link if the clipboard API is unavailable (e.g. plain http).
+ * Opens Gmail's compose window in a new tab with this address already in the
+ * To field — a visible, unmistakable result instead of a silent clipboard write.
  *
  * Magic UI ShimmerButton can only render a <button>, so the action happens
  * in onClick. Keyboard users get the same behavior via Enter/Space.
@@ -23,21 +23,13 @@ export function ContactButton({
   className?: string;
   "aria-label"?: string;
 }) {
-  async function handleContact() {
-    // Try the modern clipboard API first.
-    let copied = false;
-    try {
-      if (navigator.clipboard?.writeText) {
-        await navigator.clipboard.writeText(email);
-        copied = true;
-      }
-    } catch {
-      // Clipboard blocked or unavailable — fall back to mailto.
-    }
-
-    // If we couldn't copy, open the default mail client as a last resort.
-    if (!copied) {
-      window.location.href = `mailto:${email}`;
+  function handleContact() {
+    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+    // Popup blockers allow window.open inside a real click handler; fall back
+    // to navigating this tab only if the new tab was still refused.
+    const opened = window.open(url, "_blank", "noopener,noreferrer");
+    if (!opened) {
+      window.location.href = url;
     }
   }
 

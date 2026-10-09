@@ -8,6 +8,7 @@ import {
 
 import { ContactButton } from "@/components/contact-button";
 import { CopyEmailButton } from "@/components/copy-email-button";
+import { HeroPhoto } from "@/components/hero-photo";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteDock } from "@/components/site-dock";
@@ -68,9 +69,13 @@ export default function Home() {
         {/* Same width + padding as <main> so hero text lines up with every section below */}
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
           <div className="flex flex-col items-start gap-6">
-            <p className="font-mono text-[11px] tracking-[0.28em] text-muted-foreground uppercase">
-              {SITE.role}
-            </p>
+            {/* Role label left, profile photo pinned to the hero's top right */}
+            <div className="flex w-full items-center justify-between gap-4">
+              <p className="font-mono text-[11px] tracking-[0.28em] text-muted-foreground uppercase">
+                {SITE.role}
+              </p>
+              <HeroPhoto />
+            </div>
 
             <h1 className="text-[clamp(2.75rem,11vw,7rem)] leading-[0.92] font-black tracking-tight">
               {SITE.nameParts.before}
