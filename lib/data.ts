@@ -12,6 +12,8 @@
  * ────────────────────────────────────────────────────────────────────────────
  */
 
+import { gmailComposeUrl } from "@/lib/utils";
+
 export type NavIconKey = "home" | "about" | "projects" | "skills" | "contact";
 export type SocialIconKey = "github" | "linkedin" | "discord" | "email";
 
@@ -126,7 +128,7 @@ export const SOCIALS: SocialLink[] = [
   { label: "GitHub", icon: "github", url: "https://github.com/inigo011808-debug" },
   { label: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/rhian-inigo-r-regis-bb1b71310" },
   { label: "Discord", icon: "discord", url: "https://discord.com/users/446605345305919488" },
-  { label: "Email", icon: "email", url: `mailto:${SITE.email}` }, // auto-uses SITE.email
+  { label: "Email", icon: "email", url: gmailComposeUrl(SITE.email) }, // Gmail compose, same as Contact me
 ];
 
 /* ─────────────────────────────── Sections ─────────────────────────────── */

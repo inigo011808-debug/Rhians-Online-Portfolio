@@ -30,7 +30,7 @@ import {
   SKILLS_SECTION,
   SKILL_CATEGORIES,
 } from "@/lib/data";
-import { cn } from "@/lib/utils";
+import { cn, gmailComposeUrl } from "@/lib/utils";
 
 /** The About text. Rendered side by side, or next to your photo when SITE.avatar is set. */
 function AboutParagraphs({ className }: { className?: string }) {
@@ -250,7 +250,7 @@ export default function Home() {
                 />
                 <p className="font-mono text-sm">
                   <SmartLink
-                    href={`mailto:${SITE.email}`}
+                    href={gmailComposeUrl(SITE.email)}
                     className="text-muted-foreground underline-offset-4 transition-colors hover:text-brand hover:underline"
                   >
                     {SITE.email}

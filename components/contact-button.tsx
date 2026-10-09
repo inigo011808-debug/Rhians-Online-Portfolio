@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 
 import { ShimmerButton } from "@/components/ui/shimmer-button";
-import { cn } from "@/lib/utils";
+import { cn, gmailComposeUrl } from "@/lib/utils";
 
 /**
  * Opens Gmail's compose window in a new tab with this address already in the
@@ -24,7 +24,7 @@ export function ContactButton({
   "aria-label"?: string;
 }) {
   function handleContact() {
-    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+    const url = gmailComposeUrl(email);
     // Popup blockers allow window.open inside a real click handler; fall back
     // to navigating this tab only if the new tab was still refused.
     const opened = window.open(url, "_blank", "noopener,noreferrer");
