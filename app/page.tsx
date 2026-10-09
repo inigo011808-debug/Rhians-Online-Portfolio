@@ -70,7 +70,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
           <div className="flex flex-col items-start gap-6">
             {/* Role label left, profile photo pinned to the hero's top right */}
-            <div className="flex w-full items-center justify-between gap-4">
+            <div className="flex w-full items-center justify-between sm:gap-4">
               <p className="font-mono text-[11px] tracking-[0.28em] text-muted-foreground uppercase">
                 {SITE.role}
               </p>

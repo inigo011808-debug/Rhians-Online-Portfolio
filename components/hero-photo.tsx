@@ -20,9 +20,9 @@ export function HeroPhoto() {
   const [failed, setFailed] = useState(false);
 
   return (
-    <div className="relative size-[72px] shrink-0 overflow-hidden rounded-full border-2 border-brand/60 bg-card/80 shadow-[0_0_24px_-6px_var(--brand-glow)] sm:size-28">
+    <div className="relative size-32 shrink-0 overflow-hidden rounded-full border-2 border-brand/60 bg-card/80 shadow-[0_0_40px_-10px_var(--brand-glow)] sm:size-64">
       {/* Placeholder behind the photo */}
-      <span className="absolute inset-0 flex items-center justify-center font-mono text-lg font-bold tracking-widest text-brand/80 sm:text-2xl">
+      <span className="absolute inset-0 flex items-center justify-center font-mono text-3xl font-bold tracking-widest text-brand/80 sm:text-6xl">
         {INITIALS}
       </span>
       {!failed && (
@@ -30,7 +30,7 @@ export function HeroPhoto() {
           src={PHOTO_SRC}
           alt={`${SITE.name} portrait`}
           fill
-          sizes="(min-width: 640px) 112px, 72px"
+          sizes="(min-width: 640px) 256px, 128px"
           className="object-cover"
           onError={() => setFailed(true)}
         />
